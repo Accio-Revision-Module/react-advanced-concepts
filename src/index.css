@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --background-color: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --link-color: #646cff;
+  --hover-link-color: #535bf2;
+  --button-color: #1a1a1a;
+
+  --black: #000;
+  --white: #fff;
+}
+
+body[data-theme="dark"] {
+  --background-color: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --link-color: #646cff;
+  --hover-link-color: #535bf2;
+  --button-color: #1a1a1a;
+
+  --black: #000;
+  --white: #fff;
+}
+
+body[data-theme="light"] {
+  --background-color: #efefef;
+  --text-color: #333;
+  --link-color: #646cff;
+  --hover-link-color: #535bf2;
+  --button-color: #e3e3e3;
+
+  --black: #fff;
+  --white: #000;
+}
+
+body[data-theme="morning"] {
+  --background-color: #ffff7f;
+  --text-color: #333;
+  --link-color: #ff6464;
+  --hover-link-color: #f25353;
+  --button-color: #ff7b00;
+
+  --black: #fff;
+  --white: #000;
+}
+
+body[data-theme="evening"] {
+  --background-color: #002f80;
+  --text-color: #ffffff;
+  --link-color: #64d3ff;
+  --hover-link-color: #53edf2;
+  --button-color: #78b5ff;
+
+  --black: #000000;
+  --white: #ffffff;
+}
+
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--hover-link-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.2s;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--link-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+nav {
+  padding: 1rem;
+  background-color: var(--black);
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle {
+  display: flex;
+  gap: 10px;
+
+  background-color: var(--background-color);
+  border-radius: 50px;
+}
+
+.toggle div {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+.activeTheme {
+  background-color: var(--link-color);
+}
